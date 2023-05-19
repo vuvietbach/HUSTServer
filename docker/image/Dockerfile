@@ -33,12 +33,12 @@ RUN conda config --set auto_activate_base false
 RUN conda update -n base -c defaults conda -y
 
 # install deep learning frameworks
-COPY ./pytorch.yml /home/ubuntu/pytorch.yml
-RUN conda env create -f /home/ubuntu/pytorch.yml
+# COPY ./pytorch.yml /home/ubuntu/pytorch.yml
+# RUN conda env create -f /home/ubuntu/pytorch.yml
 
-COPY ./tf2.yml /home/ubuntu/tf2.yml
-RUN conda env create -f /home/ubuntu/tf2.yml
-ENV LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/ubuntu/miniconda3/envs/tensorflow/lib/
+# COPY ./tf2.yml /home/ubuntu/tf2.yml
+# RUN conda env create -f /home/ubuntu/tf2.yml
+# ENV LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/ubuntu/miniconda3/envs/tensorflow/lib/
 
 # COPY ./tf1.yml /home/ubuntu/tf1.yml
 # RUN conda env create -f /home/ubuntu/tf1.yml

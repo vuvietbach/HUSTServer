@@ -26,18 +26,29 @@ if [ -z "$DISTRIB_DESCRIPTION" ] && [ -x /usr/bin/lsb_release ]; then
     DISTRIB_DESCRIPTION=$(lsb_release -s -d)
 fi
 
-printf "=============================================================================\n"
-printf "            \ \   / /  | |  | | \ | |  | |  | |  | | \ | |  | |\n"
-printf "             \ \_/ /   | |  | |\ \| |  | |__| |  | |\ \| |  | |\n"
-printf "              \___/    |_|  |_| \_|_|  |______|  |_| \_|_|  |_|\n"
-printf "=============================================================================\n"
+# printf "=============================================================================\n"
+# printf "            \ \   / /  | |  | | \ | |  | |  | |  | | \ | |  | |\n"
+# printf "             \ \_/ /   | |  | |\ \| |  | |__| |  | |\ \| |  | |\n"
+# printf "              \___/    |_|  |_| \_|_|  |______|  |_| \_|_|  |_|\n"
+# printf "=============================================================================\n"
+# printf "\n"
+# printf "Welcome to %s (%s %s %s)\n" "$DISTRIB_DESCRIPTION" "$(uname -o)" "$(uname -r)" "$(uname -m)"v
+# printf "\n"
+
+
+printf " ____  _  __          _____   _               ____   \n"
+printf "|  _ \| |/ /    /\   |_   _| | |        /\   |  _ \  \n"
+printf "| |_) | ' /    /  \    | |   | |       /  \  | |_) | \n"
+printf "|  _ <|  <    / /\ \   | |   | |      / /\ \ |  _ <  \n"
+printf "| |_) | . \  / ____ \ _| |_  | |____ / ____ \| |_) | \n"
+printf "|____/|_|\_\/_/    \_\_____| |______/_/    \_\____/  \n"
 printf "\n"
 printf "Welcome to %s (%s %s %s)\n" "$DISTRIB_DESCRIPTION" "$(uname -o)" "$(uname -r)" "$(uname -m)"v
 printf "\n"
 
-printf "Please use one of the following commands to start the required environment with the framework of your choice:\n"
-printf "for PyTorch 1.11.0 with Python3.10 (CUDA 11.3) _________________________________ conda activate pytorch\n"
-printf "for TensorFlow 2.9.0 with Python3.10 (CUDA 11.2) _______________________________ conda activate tensorflow\n"
+# printf "Please use one of the following commands to start the required environment with the framework of your choice:\n"
+# printf "for PyTorch 1.11.0 with Python3.10 (CUDA 11.3) _________________________________ conda activate pytorch\n"
+# printf "for TensorFlow 2.9.0 with Python3.10 (CUDA 11.2) _______________________________ conda activate tensorflow\n"
 # printf "for TensorFlow 1.15.0 with Python3.7 (CUDA 10.0) _______________________________ conda activate tf1\n"
 
 printf "\n"

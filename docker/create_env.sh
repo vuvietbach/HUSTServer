@@ -62,6 +62,7 @@ elif [ "$server" = "1" ]; then
 else
     s="0,1,2,3,4,5,6,7"
 fi
+s="0,1,2,3"
 
 # copy and paste ssh public key
 mkdir -p ~/vinuni/user/$username # -p will ignore if existing
@@ -88,10 +89,10 @@ fi
 # create a container
 docker run --init --restart=always --name $newname \
     --memory 230g --shm-size 64g \
-    --cpuset-cpus="0-62" --gpus "\"device=$s\"" \
-    -v ~/vinuni/user/$username:/home/ubuntu/$username \
-    -v ~/vinuni/shared:/home/ubuntu/shared \
-    -v ~/vinuni/data:/home/ubuntu/data:ro \
+    --cpuset-cpus="0-48" --gpus "\"device=$s\"" \
+    -v /bkai/user/$username:/home/ubuntu/$username \
+    -v /bkai/shared:/home/ubuntu/shared \
+    -v /bkai/data:/home/ubuntu/data:ro \
     -p $port:22 -itd ubuntu:v22.04
 # copy authorized keys inside container
 docker cp ~/.ssh/user/$username/authorized_keys $newname:/home/ubuntu/.ssh
